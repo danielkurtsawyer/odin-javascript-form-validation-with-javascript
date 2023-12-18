@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="index.css">
+  <title>Form Validation with JavaScript</title>
+</head>
+<body>
+  <h1>Form</h1>
+  <form novalidate>
+    <div class="field">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+      <div class="email-error error"></div>
+    </div>
+    <div class="field">
+      <label for="country">Country:</label>
+      <input type="text" name="country" id="country" pattern="\D*" required>
+      <div class="country-error error"></div>
+    </div>
+    <div class="field">
+      <label for="zip-code">Zip Code:</label>
+      <input type="number" name="zip-code" id="zip-code" min="0" required>
+      <div class="zip-code-error error"></div>
+    </div>
+    <div class="field">
+      <label for="password1">Password:</label>
+      <input type="password" name="password1" id="password1" minlength="6" maxlength="32" required>
+      <div class="password1-error error"></div>
+    </div>
+    <div class="field">
+      <label for="password2">Confirm Password:</label>
+      <input type="password" name="password2" id="password2" required>
+      <div class="password2-error error"></div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
